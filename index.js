@@ -1,4 +1,4 @@
-var app=require('express'){};
+var app=require('express')();
 var port=process.env.PORT || 8082;
 app.get('/',function(req,res){
 	res.send('hello world');
