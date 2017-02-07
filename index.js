@@ -7,8 +7,8 @@ var app=express();
 var port=process.env.PORT || 8082;
 
 var connection=mysql.createConnection({
-host:'192.168.1.117',
-user :'cosmo_remote',
+host:'localhost',
+user :'cosmo_admin',
 password:'IBMP@w0rd1234'
 });
 
