@@ -13,9 +13,9 @@ password:'IBMP@w0rd1234',
 database:'cosmo2017'
 });
 
-app.set('views',path.join(__dirname,'views'));
+app.set('views',path.join(__dirname,'/views'));
 app.set('view engine','jade');
-//app.use(express.static(path.join(__dirname,'public')));
+app.use(express.static(path.join(__dirname,'/public')));
 
 //app.get('/',function(req,res){
 //	connection.query('SELECT * FROM users',function(err,rows){
@@ -23,10 +23,10 @@ app.set('view engine','jade');
 //	})
 	//res.send('hello world');
 //});
-function getHomePage(req,res){
-	res.render('index.jade');
-}
-app.get('/',getHomePage);
+//function getHomePage(req,res){
+//	res.render('index.jade');
+//}
+//app.get('/',getHomePage);
 
 app.listen(port,function () {
 	console.log('Start host on'+port);
