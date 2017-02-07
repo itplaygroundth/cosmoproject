@@ -2,7 +2,7 @@
 var express=require('express');
 var path=require('path');
 var mysql=require('mysql');
-var app-express();
+var app=express();
 
 var port=process.env.PORT || 8082;
 
