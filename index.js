@@ -27,9 +27,13 @@ app.use(express.static(path.join(__dirname,'/public')));
 //	res.render('index.jade');
 //}
 //app.get('/',getHomePage);
-app.get('/',function(req,res){
-	res.render('users');
-});
+app.get('/jade', function(req ,res) {
+
+  res.render('index', {
+    title: 'This is title of Jade Template',
+    message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
+    names: ['John Doe', 'Jane Doe', 'Jane Dane']
+  });
 app.listen(port,function () {
 	console.log('Start host on'+port);
 	// body...
