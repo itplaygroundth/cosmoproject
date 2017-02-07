@@ -17,7 +17,7 @@ app.set('views',path.join(__dirname,'/views'));
 app.set('view engine','jade');
 app.use(express.static(path.join(__dirname,'/public')));
 
-app.get('/users',function(req,res){
+app.get('/',function(req,res){
 	connection.query('SELECT * FROM users',function(err,rows){
 		res.render('users',{
 			users:rows
