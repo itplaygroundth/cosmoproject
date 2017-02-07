@@ -14,7 +14,7 @@ password:'xxxxxxxx'
 connection.query('USE cosmo2017');
 app.set('views',path.join(__dirname,'views'));
 app.set('views engine','jade');
-app.use(express.static(path.join(__dirname,'public')));
+app.use(app.static(path.join(__dirname,'public')));
 
 app.get('/',function(req,res){
 	connection.query('SELECT * FROM users',function(err,rows){
