@@ -23,18 +23,11 @@ app.use(express.static(path.join(__dirname,'/public')));
 //	})
 	//res.send('hello world');
 //});
-//function getHomePage(req,res){
-//	res.render('index.jade');
-//}
-//app.get('/',getHomePage);
-app.get('/jade', function(req ,res) {
+function getHomePage(req,res){
+	res.render('users');
+}
+app.get('/',getHomePage);
 
-  res.render('index', {
-    title: 'This is title of Jade Template',
-    message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
-    names: ['John Doe', 'Jane Doe', 'Jane Dane']
-  });
-});
 
 app.listen(port,function () {
 	console.log('Start host on'+port);
