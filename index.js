@@ -14,7 +14,7 @@ password:'IBMP@w0rd1234'
 
 connection.query('USE cosmo2017');
 app.set('views',path.join(__dirname,'views'));
-app.set('views engine','jade');
+app.set('view engine','jade');
 app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/',function(req,res){
