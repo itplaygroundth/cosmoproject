@@ -27,7 +27,9 @@ app.use(express.static(path.join(__dirname,'/public')));
 //	res.render('index.jade');
 //}
 //app.get('/',getHomePage);
-
+app.get('/',function(req,res){
+	res.render('users');
+});
 app.listen(port,function () {
 	console.log('Start host on'+port);
 	// body...
