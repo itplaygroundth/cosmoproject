@@ -17,16 +17,14 @@ app.set('views',path.join(__dirname,'/views'));
 app.set('view engine','jade');
 app.use(express.static(path.join(__dirname,'/public')));
 
-//app.get('/',function(req,res){
-//	connection.query('SELECT * FROM users',function(err,rows){
-//		res.render('users',{users:rows});
-//	})
+app.get('/users',function(req,res){
+	connection.query('SELECT * FROM users',function(err,rows){
+		res.render('users',{
+			users:rows
+		});
+	})
 	//res.send('hello world');
-//});
-function getHomePage(req,res){
-	res.render('users.jade');
-}
-app.get('/',getHomePage);
+});
 
 
 app.listen(port,function () {
