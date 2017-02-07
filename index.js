@@ -34,6 +34,8 @@ app.get('/jade', function(req ,res) {
     message: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit',
     names: ['John Doe', 'Jane Doe', 'Jane Dane']
   });
+});
+
 app.listen(port,function () {
 	console.log('Start host on'+port);
 	// body...
