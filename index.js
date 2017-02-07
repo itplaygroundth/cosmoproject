@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname,'/public')));
 	//res.send('hello world');
 //});
 function getHomePage(req,res){
-	res.render('users');
+	res.render('users.jade');
 }
 app.get('/',getHomePage);
 
