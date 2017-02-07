@@ -19,7 +19,7 @@ app.use(express.static(path.join(__dirname,'public')));
 
 app.get('/',function(req,res){
 	connection.query('SELECT * FROM users',function(err,rows){
-		res.render('users/',{users:rows});
+		res.render('/users',{users:rows});
 	})
 	//res.send('hello world');
 });
