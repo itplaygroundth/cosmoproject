@@ -1,8 +1,14 @@
 extends layout
 
 block content
-  h1= title
-  each user in users
-  	tr
-  		td=item.userid
-  		td=item.username
+  div(id="bodyRoyal")
+   table(border='1')
+    thead
+     tr
+      th ID
+      th Name
+   tbody
+    each item in users
+     tr
+      td=item.userid
+      td=item.username
