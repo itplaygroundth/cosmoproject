@@ -8,8 +8,8 @@ var port=process.env.PORT || 8082;
 
 var connection=mysql.createConnection({
 host:'192.168.1.117',
-user :'root',
-password:'xxxxxxxx'
+user :'cosmo_remote',
+password:'IBMP@w0rd1234'
 });
 
 connection.query('USE cosmo2017');
