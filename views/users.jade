@@ -2,4 +2,7 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{users}
+  each user in users
+  	tr
+  		td=item.userid
+  		td=item.username
